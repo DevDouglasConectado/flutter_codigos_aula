@@ -17,12 +17,20 @@ class MyFirstApp extends StatelessWidget{
           body: Container(
                decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
-                color: Colors.red
+                color: Colors.blue[100]
+            ),
+            child: Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.rectangle,
+                color: Colors.red[100]
+              
             ),
             width: 100.0,
             height: 100.0,
+            ),
           ),
-        ),
+
+          ),
         theme:ThemeData(primarySwatch:Colors.red),
       );
   }
