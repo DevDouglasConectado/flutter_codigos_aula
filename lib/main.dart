@@ -14,7 +14,8 @@ class MyFirstApp extends StatelessWidget{
             title: Text("RL System App"),
           ),
           body: Text("Minha App"),
-        )
+        ),
+        theme:ThemeData(primarySwatch:Colors.red),
       );
   }
 }
