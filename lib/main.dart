@@ -7,42 +7,49 @@ void main(){
   runApp(MyFirstApp());
 }
 class MyFirstApp extends StatelessWidget{
+  static const String _title = 'Minha App';
   @override
   Widget build(BuildContext context) {
       return MaterialApp(
-        home:Scaffold(
-          appBar:AppBar(
-            title: Text("RL System App"),
-          ),
-          body: Container(
-               decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                color: Colors.blue[100]
-            ),
-            padding:EdgeInsets.all(10.0),
-               child: Row(
-                 children: [
-                     Column(
-                       children:[
-                         Text("RL Sytem", style: TextStyle(fontSize: 20.0, color: Colors.white),),
-                          Padding(padding: EdgeInsets.all(10.0), ),
-                          Text("RL Sytem"),
-                          ]
-                     ),
-                     Padding(padding: EdgeInsets.all(10.0), ),
-                     Column(
-                       children:[
-                         Text("RL Sytem"),
-                         Padding(padding: EdgeInsets.all(10.0), ),
-                          Text("RL Sytem"),
-                          ]
-                     )
-                 ],
-               ),
-               ),
-               ),
-        theme:ThemeData(primarySwatch:Colors.red),
-      );
-  }
+         title: _title,
+         home: MyButton(),
+     );
+      }
 }
+class MyButton extends StatefulWidget{
+  @override
+     MyButtonState createState(){
+       return MyButtonState ();
+     }
+  }
+   class MyButtonState extends State<MyButton>{
+     String displayText = "Olá Mundo";
+     @override
+  Widget build(BuildContext context) {
+      return Scaffold(
+            appBar:  AppBar(
+               title:  Text ("Minha App"),
+               backgroundColor: Colors.red,
+
+            ),
+            body: Container(
+              child: Center(
+                child: Column(
+                  children:<Widget>[
+                    Text(displayText, style: TextStyle(fontSize: 30.0),)
+                    // ignore: deprecated_member_use
+                    RaisedButton(
+                       child:Text('Clique ', style: TextStyle(color: Colors.white),),
+                     )
+                  ],
+                ),
+              ),
+            )
+       );
+      
+      }
+
+   }
+
+//
 
