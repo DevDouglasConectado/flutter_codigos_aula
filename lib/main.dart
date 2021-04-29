@@ -19,18 +19,28 @@ class MyFirstApp extends StatelessWidget{
                 shape: BoxShape.rectangle,
                 color: Colors.blue[100]
             ),
-            child: Container(
-              decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                color: Colors.red[100]
-              
-            ),
-            width: 100.0,
-            height: 100.0,
-            ),
-          ),
-
-          ),
+            padding:EdgeInsets.all(10.0),
+               child: Row(
+                 children: [
+                     Column(
+                       children:[
+                         Text("RL Sytem", style: TextStyle(fontSize: 20.0, color: Colors.white),),
+                          Padding(padding: EdgeInsets.all(10.0), ),
+                          Text("RL Sytem"),
+                          ]
+                     ),
+                     Padding(padding: EdgeInsets.all(10.0), ),
+                     Column(
+                       children:[
+                         Text("RL Sytem"),
+                         Padding(padding: EdgeInsets.all(10.0), ),
+                          Text("RL Sytem"),
+                          ]
+                     )
+                 ],
+               ),
+               ),
+               ),
         theme:ThemeData(primarySwatch:Colors.red),
       );
   }
